@@ -18,15 +18,34 @@ int computer_roll[2];
 
 
 int greeting(){
-    printf("Welcome to the dice rolling game! \n");
-    printf("Please select an option: \n \n");
+    while(1){
+        printf("Welcome to the dice rolling game! \n");
+        printf("Please select an option: \n \n");
 
-    printf("1. Play a round");
-    printf("2. Show results");
-    printf("3. Exit \n");
-    
-    printf("Please enter your selection: \n");
-    scanf("%d", &selection);
+        printf("1. Play a round \n");
+        printf("2. Show results \n");
+        printf("3. Exit \n");
+        
+        printf("Please enter your selection: ");
+        scanf("%d", &selection);
+
+        if(selection == 1){
+            // TODO: Do testing once multi-file system is made
+        }
+
+        if(selection == 2){
+            // TODO: Do testing once multi-file system is made
+        }
+
+        if(selection == 3){
+            // TODO: Do testing once multi-file system is made
+        }
+        else{
+            printf("Error! Please try again! \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ");
+        }
+
+
+    }
 }
 
 int rollDice(){
@@ -74,8 +93,7 @@ int rollDice(){
 
 //! Testing
 int main(){
-    srand(time(0));
-    rollDice();
+    greeting();
 
 
     return 0;
