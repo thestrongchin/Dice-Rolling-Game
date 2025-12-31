@@ -16,6 +16,7 @@ int ties = 0;
 int player_roll[2];
 int computer_roll[2];
 
+int rounds[];
 
 int greeting(){
     while(1){
@@ -49,6 +50,11 @@ int greeting(){
 }
 
 int rollDice(){
+    int size = sizeof(rounds) / sizeof(rounds[0])
+
+    for(int i = 0; i < size; i++){
+        rounds[i] = i;
+    }
 
     //* Generate player number
     for(int i = 0; i < 2; i++){
@@ -90,6 +96,12 @@ int rollDice(){
 
     // TODO: in main.c, put srand(time(0)) when calling rollDice();
 }
+
+display_results(){
+    printf("Round Results: \n");
+    printf("Round %d: You: %d, Computer: %d", );
+}
+
 
 //! Testing
 int main(){
