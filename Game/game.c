@@ -4,6 +4,7 @@
 
 //* variables
 int selection = 0;
+int gamesPlayed = 0;
 
 int playerTotal = 0;
 int computerTotal = 0;
@@ -50,11 +51,10 @@ int greeting(){
 }
 
 int rollDice(){
-    int size = sizeof(rounds) / sizeof(rounds[0])
-
-    for(int i = 0; i < size; i++){
-        rounds[i] = i;
-    }
+    int size = sizeof(rounds) / sizeof(rounds[0]);
+    // for(int i = 0; i < size; i++){
+    //     rounds[i] = i;
+    // }
 
     //* Generate player number
     for(int i = 0; i < 2; i++){
@@ -73,6 +73,7 @@ int rollDice(){
     //* Print computer roll
     computerTotal =  computer_roll[0] + computer_roll[1];
     printf("Computer rolled: %d and %d. Total = %d \n \n", computer_roll[0], computer_roll[1], computerTotal);
+
     
     //* ifs
     if(playerTotal > computerTotal){
@@ -90,22 +91,31 @@ int rollDice(){
         ties++;
     }
 
-    printf("computer wins: %d \n", computerWins);
-    printf("player wins: %d \n", playerWins);
-    printf("ties: %d", ties);
+    gamesPlayed++;
+
 
     // TODO: in main.c, put srand(time(0)) when calling rollDice();
 }
 
-display_results(){
+displayResults(){
+    int size = sizeof(rounds) / sizeof(rounds[0]);
+
     printf("Round Results: \n");
-    printf("Round %d: You: %d, Computer: %d", );
+
+    for(int i = 0; i < size; i++){
+        // TODO: Figure out how to print rounds, along with what player and computer rolled
+    }
+
+    printf("Games played: %d");
+    printf("Wins = You: %d. Computer: %d. Ties: %d.", playerWins, computerWins, ties);
+
 }
 
 
 //! Testing
 int main(){
     greeting();
+    rollDice();
 
 
     return 0;
