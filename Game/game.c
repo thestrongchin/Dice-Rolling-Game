@@ -17,7 +17,7 @@ int ties = 0;
 int player_roll[2];
 int computer_roll[2];
 
-int rounds[];
+// int rounds[];
 
 int greeting(){
     while(1){
@@ -51,7 +51,7 @@ int greeting(){
 }
 
 int rollDice(){
-    int size = sizeof(rounds) / sizeof(rounds[0]);
+    // int size = sizeof(rounds) / sizeof(rounds[0]);
     // for(int i = 0; i < size; i++){
     //     rounds[i] = i;
     // }
@@ -93,18 +93,15 @@ int rollDice(){
 
     gamesPlayed++;
 
-
     // TODO: in main.c, put srand(time(0)) when calling rollDice();
 }
 
-displayResults(){
-    int size = sizeof(rounds) / sizeof(rounds[0]);
+int displayResults(){
+    // int size = sizeof(rounds) / sizeof(rounds[0]);
 
     printf("Round Results: \n");
 
-    for(int i = 0; i < size; i++){
-        // TODO: Figure out how to print rounds, along with what player and computer rolled
-    }
+    for()
 
     printf("Games played: %d");
     printf("Wins = You: %d. Computer: %d. Ties: %d.", playerWins, computerWins, ties);
@@ -116,6 +113,7 @@ displayResults(){
 int main(){
     greeting();
     rollDice();
+    displayResults();
 
 
     return 0;
